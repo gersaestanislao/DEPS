@@ -1,0 +1,50 @@
+//Colores
+$primary-color: #00594C;
+$secondary-color: #2C4838;
+$hover-color: #B38E5D;
+$main-color: #339999;
+$warning-color: #F69110; 
+$tool-color: #707070;
+$text-color: #2b2b2b;
+$text-body-color: #26151f;
+
+// btns
+$shadow-btn: rgb( 0, 0, 0, 30%);
+$hover-main: #1f7272;
+$hover-primary: #D07500;
+$hover-main__outline: rgb( #1f7272, 25%);
+
+//Tipografía url
+$tittle-bold: quote('../src/typography/Montserrat/Montserrat-Bold');
+$tittle-semibold: quote('../src/typography/Montserrat/Montserrat-SemiBold');
+$tittle-regular: quote('../src/typography/Montserrat/Montserrat-Regular');
+$tittle-light: quote('../src/typography/Montserrat/Montserrat-Light');
+
+$paragraph-bold: quote('../src/typography/Hind/Hind-Bold');
+$paragraph-regular: quote('../src/typography/Hind/Hind-Regular');
+$paragraph-light: quote('../src/typography/Hind/Hind-Light');
+
+
+$tool-bold: quote('../src/typography/Hind/Roboto-Bold');
+$tool-regular: quote('../src/typography/Hind/Roboto-Regular');
+$tool-light: quote('../src/typography/Hind/Robotop-Light');
+
+//Dimensiónes
+$rem: 16px;
+
+$max-width-section: 1400px;
+
+
+//Helpers
+$transition-slow: all 0.4s ease-in-out;
+$border-radius:  .55rem;
+$shadow-text: rgba( 0, 0, 0, .5);
+$shadow-box: rgba( 0, 0, 0, .5);
+
+
+//Colores perfíles
+$color-tag-medic: #ffca7c;
+$color-tag-nurs: #8bc34a;
+$color-tag-multi: #ce9696;
+$color-tag-docent: #6b8c9c;
+$color-tag-direc: #7a70ba;

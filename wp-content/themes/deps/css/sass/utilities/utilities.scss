@@ -1,0 +1,113 @@
+/* ========================================================================================= */
+/*Utilities */
+/* ========================================================================================= */
+
+// displays
+
+
+
+.u-none {
+
+    display: none!important;
+
+    &\@md{
+        @include md(){
+            display: none!important;
+        }
+    }
+
+    &\@md-only{
+        @include only-md{
+            display: none!important;
+        }
+    }
+
+    &\@sm-only{
+        @include only-sm{
+            display: none!important;
+        }
+    }
+
+    &\@xs-only{
+        @include only-xs{
+            display: none!important;
+        }
+    }
+
+    
+    
+}
+
+.u-dblock {
+    display: block !important;
+
+    &\@md{
+        @include md(){
+            display: block!important;
+        }
+    }
+}
+
+// margins
+
+.u-mt1 {
+    margin-top: .75rem !important;
+}
+
+.u-mt2 {
+    margin-top: 1.5rem !important;
+}
+
+.u-mB0 {
+    margin-bottom: 0 !important;
+}
+
+.u-mB5 {
+    margin-bottom: .5rem !important;
+}
+
+.u-pB0 {
+    padding-bottom: 0 !important;
+}
+
+// Text 
+.u-text-center {
+    text-align: center !important;
+}
+
+.u-text-left {
+    text-align: left !important;
+}
+
+
+.u-text-underline-movile {
+    text-decoration: underline !important;
+
+    @include md() {
+        text-decoration: none !important;
+    }
+}
+
+.u-text-lowercase {
+    text-transform: lowercase !important;
+}
+
+
+// width 
+.u-w100 {
+    width: 100% !important;
+}
+
+// colors
+
+.u-color--warning {
+    color: $warning-color;
+}
+
+.u-color--primary {
+    color: $primary-color;
+}
+
+/* ========================================================================================= */
+/*Utilities end */
+/* ========================================================================================= */

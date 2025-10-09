@@ -1,0 +1,70 @@
+/* ========================================================================================= */
+/* OBJECT - O BTNS */
+/* ========================================================================================= */
+.o-link {
+   background-color: transparent;
+   font-family: 'Paragraph-regular';
+   font-size: .9rem;
+   margin-right: 0;
+   border: 0;
+   transition: all color .4s;
+
+   
+   &:hover {
+      color: $hover-color;
+
+     i {
+        margin-left: .5rem;
+        color: $warning-color;
+     }
+
+   }
+
+   
+   &__icon {
+      margin-left: 3px;
+      transition: $transition-slow;
+    }
+
+
+   &--primary {
+     color: $text-color;
+
+     i {
+        color: $hover-color;
+     }
+
+   }
+
+
+   &--secondary {
+      color: $main-color;
+ 
+      i {
+         color: $hover-color;
+      }
+ 
+    }
+
+
+   &--underline {
+      text-decoration: underline;
+   }
+
+
+   &--white {
+     color: white;
+
+     i {
+        color: $hover-color;
+     }
+
+   }
+
+
+}
+
+/* ========================================================================================= */
+/* END OBJECT - O BTNS */
+/* ========================================================================================= */
+

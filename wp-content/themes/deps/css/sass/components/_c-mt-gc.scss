@@ -1,0 +1,122 @@
+/* ========================================================================================= */
+/* COMPONENT - Mainor (Descriptivo Quiénes somos)*/
+/* ========================================================================================= */
+.c-mt-gc {
+    margin: 1rem 0;
+    padding: 0 1rem;
+
+    @include md() {
+        margin: 1rem auto;
+        max-width: 1400px;
+    }
+
+
+    &__wrapper {
+        color: $text-color;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @include xl(){
+            padding: 0 1rem 0;
+        }
+
+    }
+
+
+    &__col-1 {
+        background-color: rgba( $tool-color, .27);
+        box-sizing:border-box;
+        padding: 2.5rem 0 3rem;
+        width: 48.5%;
+
+        @include md() { 
+            width: 49.2%;
+        }
+
+    }
+
+
+    &__col-2 {
+        background-color: rgba( $tool-color, .27);
+        box-sizing:border-box;
+        padding: 2.5rem 0 3rem;
+        width: 48.5%;
+
+        @include md() { 
+            width: 49.2%;
+        }
+
+    }
+
+
+    &__icon {
+        color: rgba( $tool-color, .47);
+        margin-bottom: 1rem;
+    }
+
+
+    &__content-text {
+        max-width: 75%;
+        margin: auto;
+
+        @include md() {
+            max-width: 75%;
+        }
+
+    }
+
+
+    &__tittle {
+        font-family: 'Tittle-bold';
+        font-size: 1.2rem;
+        line-height: 1.1;
+        margin-bottom: 2rem;
+        position: relative;
+
+        &:before {
+            background-color: $hover-color;
+            bottom: -.75rem;
+            content: '';
+            height: .25rem;
+            left: 0;
+            position: absolute;
+            width: 2rem;
+
+            @include md () {
+                height: .35rem;
+                width: 2.5rem;
+            }
+            
+        }
+
+        @include md() {
+           font-size: 1.533333rem; 
+           line-height: 1.2;
+        }
+
+    }
+
+
+    &__content-descript {
+
+        p {
+            display: none;
+            font-family: 'Paragraph-regular';
+            font-size: .98rem;
+            line-height: 1.6;
+            margin: 0.5rem 0 2.5rem;
+
+             @include md() {
+                display: block;
+                font-size: 1.1rem;
+                line-height: 1.7;
+                margin: 2rem 0 ;
+             }
+        }
+    }
+}
+
+/* ========================================================================================= */
+/* END COMPONENT -  Mainor (Descriptivo Quiénes somos)*/
+/* ========================================================================================= */

@@ -1,0 +1,62 @@
+// variables 
+$widht-arrow: 1.9rem;
+
+
+.mixitup-control {
+    background-color: transparent;
+    border: 0;
+    color: $text-color;
+    font-family: 'Paragraph-regular';
+    font-size: 1.2rem;
+    width: 1.5rem;
+    margin: 0 .25rem;
+    position: relative;
+
+    &.mixitup-control-active {
+
+        &:before {
+            content: '';
+            background-color: $main-color;
+            height: .2rem;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+}
+
+// Arrows
+.mixitup-control-prev {
+   
+    border-radius: 50%;
+    color: $main-color  !important;
+    line-height: 0;
+    font-size: 1.7rem;
+    height: $widht-arrow;
+    width: $widht-arrow;
+
+    &.mixitup-control-disabled{
+        color: $tool-color  !important;
+        opacity: .5;
+    }
+
+}
+
+
+.mixitup-control-next {
+   
+    border-radius: 50%;
+    color: $main-color  !important;
+    line-height: 0;
+    font-size: 1.7rem;
+    height: $widht-arrow;
+    width: $widht-arrow;
+
+    &.mixitup-control-disabled{
+        color: $tool-color  !important;
+        opacity: .5;
+    }
+
+}

@@ -1,0 +1,96 @@
+/* ========================================================================================= */
+/* COMPONENT - Mainor (Descriptivo Quiénes somos)*/
+/* ========================================================================================= */
+.c-mainor {
+    max-width: 85%;
+    margin: 3.5rem auto 4.5rem;
+
+    @include md() {
+        max-width: 89%;
+        margin: 6.5rem auto 5rem;
+    }
+
+
+    &__wrapper {
+        color: $text-color;
+        display: flex;
+        flex-direction: column;
+
+        @include sm() {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+    }
+
+
+    &__col-1 {
+
+        @include sm() {
+            width: 42%;
+        }
+
+    }
+
+
+    &__col-2 {
+
+         @include sm() {
+            width: 55%;
+        }
+        
+    }
+
+
+    &__tittle {
+        font-family: 'Tittle-bold';
+        font-size: 1.333333rem;
+        line-height: 1.1;
+        margin-bottom: 2rem;
+        position: relative;
+
+        &:before {
+            background-color: $main-color;
+            bottom: -.75rem;
+            content: '';
+            height: .25rem;
+            left: 0;
+            position: absolute;
+            width: 2rem;
+
+            @include md () {
+                height: .35rem;
+                width: 2.5rem;
+            }
+            
+        }
+
+        @include md() {
+           font-size: 1.533333rem; 
+           line-height: 1.2;
+        }
+
+    }
+
+
+    &__content-descript {
+
+        p {
+            font-family: 'Paragraph-regular';
+            font-size: .98rem;
+            line-height: 1.6;
+            margin: 0.5rem 0 2.5rem;
+
+             @include md() {
+                font-size: 1.1rem;
+                line-height: 1.7;
+                 margin: 0 0 3.5rem;
+             }
+        }
+    }
+
+}
+
+/* ========================================================================================= */
+/* END COMPONENT -  Mainor (Descriptivo Quiénes somos)*/
+/* ========================================================================================= */

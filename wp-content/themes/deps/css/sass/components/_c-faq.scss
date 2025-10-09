@@ -1,0 +1,209 @@
+
+
+.c-faq {
+    box-sizing: border-box;
+    width: 100%;
+
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+
+        @include md() {
+            flex-direction: row;
+            margin: auto;
+            max-width: $max-width-section;
+            width: 92%;
+        }
+
+    }
+
+
+    &__decript-curso {
+        background-color: rgba($tool-color, .1);
+        order: 2;
+        padding: 0 0 4rem;
+
+        @include md() {
+            background-color: transparent;
+            order: 1;
+            padding: 5.5rem 0 7rem;
+            width: 65%;
+        }
+
+    }
+
+
+    &__wrapper-descript {
+        box-sizing: border-box;
+        margin: auto;
+        padding: .5rem;
+        width: 360px;
+        
+        @include sm() { 
+            width: 97%;
+        }
+          
+    }
+
+
+
+
+    &__details {
+        box-sizing: border-box;
+        color: $text-color;
+        margin: auto;
+        order: 1;
+        padding: 0.5rem 1rem 2.5rem;
+        width: 360px;
+
+        @include sm() {
+            margin: 0 2rem;
+            max-width: 640px;
+            width: 95%;
+        }
+
+
+        @include md() {
+            border: 1px solid #cccccc;
+            height: 38rem;
+            margin-top: 5.5rem;
+            max-width: 100%;
+            order: 2;
+            padding: 1.5rem 2.5rem;
+            width: 35%;
+        }
+
+
+    }
+
+
+    &__table-descript {
+
+        @include sm() {          
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+
+        @include md() {
+            display: block;
+        }
+
+    }
+
+
+    &__content-tags-perfiles {
+        align-items: flex-start;
+        display: flex;
+    }
+
+
+    &__content-date {
+        display: flex;
+        margin: .75rem 0;
+
+        @include sm() {
+            width: 50%;
+        }
+
+
+        @include md() {
+            width: 100%;
+            margin: 0.75rem 0 1.2rem;
+        }
+
+    }
+
+
+    &__content-col {
+        display: flex;
+        width: 50%;
+    }
+
+
+    &__detail-content {
+        margin-left: .5rem;
+    }
+
+
+    &__tittle-detail {
+        color: $main-color;
+        display: block;
+        font-family: 'Paragraph-bold';
+        font-size: .8rem;
+
+        @include md() {
+             font-size: .92rem;
+        }
+
+    }
+
+
+    &__detail {
+        font-family: 'Paragraph-regular';
+        font-size: .95rem;
+        line-height: .7;
+
+        @include md() {
+            font-size: 1.1rem;
+            line-height: 1.2;
+        }
+    }
+
+
+    &__icon-detail {
+        margin-top: .333rem;
+
+        @include md() {
+            font-size: 1.3rem;
+        }
+    }
+
+
+    &__content-buttons {
+
+    }
+
+
+    &__subtitle {
+        margin: 1rem 0.5rem 1.5rem;
+        color: #2b2b2b;
+        font-size: 1rem;
+        font-family: 'Tittle-bold';
+        position: relative;
+        padding-top: 4rem;
+    }
+
+    &__title {
+        margin: 1rem 0.5rem 1.5rem;
+        color: #2b2b2b;
+        font-size: 1.2rem;
+        font-family: 'Tittle-bold';
+        position: relative;
+        padding-top: 4rem;
+
+        &:before {     
+            background-color: $main-color;
+            bottom: -0.75rem;
+            content: "";
+            height: 0.25rem;
+            left: 0;
+            position: absolute;
+            width: 2rem;
+        }
+
+        @include md() { 
+            color: #2b2b2b;
+            font-size: 1.8rem;
+            margin: 0 0 2rem;
+        }
+
+    }
+
+    &__paragrah {
+        padding-top: 2rem;
+        font-size: 1rem;
+        font-family: 'Paragraph-regular';
+    }
+}

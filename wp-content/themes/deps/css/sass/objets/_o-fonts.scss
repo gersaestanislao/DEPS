@@ -1,0 +1,98 @@
+/* ========================================================================================= */
+/* OBJECT - O FONT */
+/* ========================================================================================= */
+@include font-face(Tittle-bold, $tittle-bold, bold, normal, ttf);
+@include font-face(Tittle-semibold, $tittle-semibold, bold, normal, ttf);
+@include font-face(Tittle-regular, $tittle-regular, regular, normal, ttf);
+@include font-face(Paragraph-regular, $paragraph-regular, regular, normal, ttf);
+@include font-face(Paragraph-bold, $paragraph-bold, bold, normal, ttf);
+
+
+.o-font {
+
+  &-slide {
+    color: black;
+    font-family: "Tittle-bold";
+    font-size: 1.75rem;
+
+    @include sm() {
+      font-size: 2.75rem;
+    }
+
+    @include md() {
+      font-size: 3.875rem;
+    }
+    
+  }
+
+
+  &-grande {
+    color: red;
+    
+  }
+
+
+  &-menu {
+    color: white;
+    font-family: "Tittle-regular";
+    font-size: .9rem; 
+    line-height: 2; 
+    margin: 0 .7rem;
+    padding: 0 1rem 0;
+
+    @include md() {
+      line-height: 1; 
+    }
+
+
+    &:hover {
+      color: $hover-color;
+    } 
+
+
+    &--footer {
+      color: black;
+      font-family: "Paragraph-regular";
+      font-size: .9rem;
+      line-height: 1.2;
+      margin: 0;
+
+       @include md() {
+        font-size: 1rem;
+       }
+    }
+
+
+    &--footer-white {
+      color: white;
+    }
+
+      
+    &.is-active {
+      cursor: default;
+      font-family: "Tittle-bold";
+      
+      &:hover {
+        color: white;
+        } 
+
+    }
+
+  }
+
+
+  &-menu--header {
+    font-size: .8rem;
+    color: $main-color;
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+
+}
+
+/* ========================================================================================= */
+/* END OBJECT - O FONT */
+/* ========================================================================================= */
+

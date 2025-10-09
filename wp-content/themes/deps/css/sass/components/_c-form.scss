@@ -1,0 +1,73 @@
+/* ========================================================================================= */
+/* COMPONENT - Formulario*/
+/* ========================================================================================= */
+
+.c-form {
+    margin: 1.5rem 0 0;
+
+    $size-input : 1.75rem;
+
+    &__content-fields {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    &__content-input {
+        border-radius: 5rem;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        width: 100%;
+    }
+
+
+    &__content-icon {
+        background: $main-color; 
+        height: 1.75rem;
+        width: 12%;
+        text-align: center;
+        padding: 0.65rem 0.5rem 0.5rem 0.75rem;
+        transition: $transition-slow;
+    }
+
+
+    &__content-icon--active {
+        
+        .c-form__content-icon {
+            background-color: $warning-color;
+        }
+    }
+
+
+    &__icon {
+        color: rgba( black, 0.555);
+        font-size: 1.333rem;
+    }
+
+
+    &__input {
+        width: 90%;
+        background: rgba( $tool-color, .2);
+        border: 0;
+        padding: 0 1rem;
+        font-family: 'Paragraph-regular';
+        font-size: .98rem;
+
+         @include md() {
+            font-size: 1rem;
+         }
+
+
+         &:focus-visible {
+            outline: 0;         }
+    }
+
+
+
+}
+
+/* ========================================================================================= */
+/* END COMPONENT - Formulario*/
+/* ========================================================================================= */

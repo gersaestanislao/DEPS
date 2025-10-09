@@ -1,0 +1,172 @@
+/* ========================================================================================= */
+/* COMPONENT eyecatcher curso*/
+/* ========================================================================================= */
+.c-eyecatcher-curso {
+
+    $height-eyecatcher: 340px;
+
+    background-size: cover;
+    box-sizing: border-box;
+    margin-top: 4rem;
+    width: 100%;
+
+
+    @include md() {
+        height: $height-eyecatcher;
+        margin: 7rem 0 0;
+        padding: 0;
+        position: relative;
+        width: 100%;
+    }
+
+
+    &__content-breadcrumb {
+        // display: none;
+    }
+
+
+    &__content-img {
+        height: 180px;
+        overflow: hidden;
+        position: relative;
+
+        @include sm() {
+            height: 220px;
+        }
+
+
+        @include md() {
+            height: $height-eyecatcher;
+        }
+
+
+    }
+
+
+    &__img {
+        $size-img: 600px;
+        $size-img-md: 950px;
+        $size-img-lg: 1400px;
+        $size-img-xl: 2000px;
+        $center-img:  $size-img / 2;
+        $center-img-md:  $size-img-md / 2;
+        $center-img-lg:  $size-img-lg / 2;
+        $center-img-xl:  $size-img-xl / 2;
+
+        @include position ( auto, auto, auto, -$center-img, 0, 0, 0, 50%);
+        max-width: $size-img;
+        position: absolute;
+
+
+        @include sm() {
+           margin-left: -$center-img-md ;
+           max-width: $size-img-md;
+         }
+
+
+         @include md() {
+            max-width: $size-img-lg;
+            margin-left: -$center-img-lg ;
+         }
+
+
+        @include xl() {
+            max-width: $size-img-xl;
+            margin-left: -$center-img-xl ;
+         }
+    }
+
+
+    &__content-tittle {
+        background-color: rgba(black, .7);
+        box-sizing: border-box;
+        padding: .5rem 4% 4rem;
+
+
+        @include sm() {
+            padding: 2rem 4%;
+            height: 18rem;
+        }
+
+        @include md() { 
+            height: $height-eyecatcher;
+            position: absolute;
+            top: 0;
+            width: 60%;
+        }
+
+    }
+
+
+    &__title {
+        margin: 1rem 0.5rem 1.5rem;
+        color: white;
+        font-size: 1.2rem;
+        font-family: 'Tittle-bold';
+        position: relative;
+
+        &:before {     
+            background-color: $main-color;
+            bottom: -0.75rem;
+            content: "";
+            height: 0.25rem;
+            left: 0;
+            position: absolute;
+            width: 2rem;
+        }
+
+        @include md() { 
+            font-size: 2.2rem;
+            margin: 0 0 2rem;
+        }
+
+    }
+
+
+    &__tags {
+        display: none;
+        
+        @include md() {
+            align-items: flex-start;
+            display: flex;  
+            flex-wrap: wrap;
+        }
+    }
+
+
+    &__content-date {
+        @include box-shadow ( 0, 0, 5px, $text-color);
+        background-color: white;
+        display: none;
+        flex-direction: column;
+        line-height: 1;
+        padding: .333rem .5rem;
+        position: absolute;
+        text-align: center;
+        z-index: 7;
+
+        @include md() {
+            display: flex;
+            min-width: 3.7rem;
+            right: 37.5%;
+            bottom: -3rem;
+        }
+    }
+
+
+    &__date-day {
+        font-family: 'Tittle-bold';
+        color: $main-color;
+        font-size: 3rem;
+    }
+
+
+    &__date-descript {
+        font-family: 'Paragraph-regular';
+        text-transform: uppercase;
+    }
+
+}
+/* ========================================================================================= */
+/* END COMPONENT - eyecatcher curso*/
+/* ========================================================================================= */

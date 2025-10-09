@@ -1,0 +1,55 @@
+.c-generica {
+
+    &__wrapper {
+        color: $text-color;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    &__content-text {
+        width: 100%;
+        max-width: 360px;
+        margin: 3rem auto 4rem;
+
+        @include sm () {
+            max-width: 990px;
+            width: 80%;
+        }
+
+        @include md () {
+            margin: 7.5rem auto 4rem;
+        }
+    }
+
+    &__tittle {
+        font-family: 'Tittle-bold';
+        font-size: 1.333333rem;
+        line-height: 1.1;
+        margin-bottom: 2rem;
+        position: relative;
+
+        &:before {
+            background-color: $main-color;
+            bottom: -.75rem;
+            content: '';
+            height: .25rem;
+            left: 0;
+            position: absolute;
+            width: 2rem;
+
+            @include md () {
+                height: .35rem;
+                width: 2.5rem;
+            }
+            
+        }
+
+        @include md() {
+           font-size: 1.533333rem; 
+           line-height: 1.2;
+        }
+
+    }
+
+}

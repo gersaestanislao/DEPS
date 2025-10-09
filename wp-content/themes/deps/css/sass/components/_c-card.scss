@@ -1,0 +1,398 @@
+/* ========================================================================================= */
+/* COMPONENT -Card*/
+/* ========================================================================================= */
+.c-card {
+
+    // variable locales 
+    $size-content-img-mobile: 110px;
+    $size-content-img-desktop: 140px;
+   
+    border-bottom: 1px solid rgba($tool-color, .3);
+    cursor: pointer;
+    margin: 0 auto 3rem;
+    max-width: 100%;
+    padding: 0 .5rem 1rem;
+    opacity: 1;
+    transition: $transition-slow;
+
+    &:hover {
+        opacity: .7;
+    }
+
+
+    &--relation {
+        border: 1px solid rgba($tool-color, .3);
+        padding: 0 0 1rem;
+    }
+
+    
+    @include sm() {
+        @include box-shadow ( 0, 0, 2px, $shadow-box);
+        padding: 0 0 1rem;
+        width: 100%;
+        transition: $transition-slow;
+        position: relative;
+        
+        &:hover {
+            opacity: 1;
+        }
+        
+    }
+
+
+    @include md() {
+        height: 23rem;
+    }
+
+    
+    &__wrapper {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        justify-content: space-between;
+        
+        @include sm() {
+            flex-direction: column; 
+            position: initial;  
+        }
+        
+    }
+    
+
+
+    &__wrapper-date--relation {
+         flex-direction: column;
+         cursor: pointer;
+         transition: $transition-slow;
+
+         @include md() {
+
+             &:hover{
+                opacity: .5;
+             }
+             
+         }
+
+    }
+    
+    
+    &__col-1 {
+        width: 30%;
+            
+        @include sm() {
+            width: 100%;
+        }
+
+    }
+
+
+    &__col-1--relation {
+        width: 100%;
+    }
+    
+    
+    &__col-2 {
+        width: 70%;
+        
+       @include sm() {
+            width: 100%;
+        }
+
+    }
+
+
+    &__col-2--relation {
+        width: 100%;
+        height: 12rem;
+        position: relative;
+
+         @include md() {
+            height: 16rem;
+         }
+    }
+
+
+    &__content-date {
+        @include box-shadow ( 0, 0, 5px, $text-color);
+        background-color: white;
+        display: none;
+        flex-direction: column;
+        line-height: 1;
+        padding: .333rem .5rem;
+        position: absolute;
+        right: .75rem;
+        text-align: center;
+        top: .75rem; 
+        z-index: 7;
+        
+        @include sm() {
+            top: 1.333rem;
+            right: 1rem
+        }
+    }
+
+
+    &__wrapper-date--Desactualizado {
+        display: none;
+    }
+
+    &__wrapper-date--Vigente {
+        display: initial;
+
+        .c-card__content-date {
+            display: none;
+        }
+
+        .c-card__content-date:nth-child(1) {
+
+            @include sm() {
+                display: flex;
+            }
+        }
+
+    }
+
+    .c-card__content-date--Desactualizado {
+         @include md() {
+            display: block !important;
+        }
+    }
+
+    &__content-date--relation {
+        display: flex;
+        right: .5rem;
+        top: .5rem;
+    }
+
+
+    &__date-day {
+        font-family: 'Tittle-bold';
+        color: $main-color;
+        font-size: 2rem;
+    }
+
+ 
+    &__content-img {
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        height: $size-content-img-mobile;
+        overflow: hidden;
+        width: 100%;
+        
+        @include sm() {
+            height: $size-content-img-desktop;
+        }
+        
+    }
+
+
+    &__content-img--relation {
+        height: $size-content-img-desktop / 1.7;
+
+         @include md() {
+            height: $size-content-img-desktop / 1.1;
+         }
+    }
+
+
+    &__shadow {
+        @include position ( auto, auto, auto, auto, 0, 0, 0, 0);
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, .2);
+        z-index: 4;
+
+        @include md() {
+            display: initial;
+        }
+
+    }
+
+
+    &__img {
+        @include position ( auto, auto, auto, auto, 0, 0, 0, -100%);
+        position: absolute;
+        max-width: 22rem;
+        z-index: 2;
+
+        @include sm() {
+           max-width: 25rem;
+           left: -20%;
+        }
+
+
+        @include md() {
+            left: -11%;
+        }
+
+    }
+
+
+    &__img--relation {
+        $width-img: 22rem;
+        @include position ( auto, auto, auto, $width-img / -2, 0, 0, 0, 50%);
+        min-width: $width-img;
+        position: absolute;
+     }
+
+
+    &__content-text {
+        color: $text-color;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem 0;
+        
+        @include sm() {
+            padding: 1rem 1rem 0;
+        }
+
+        @include xl() {
+            padding: 1rem 1.5rem 0;
+        }
+        
+    }
+
+
+    &__content-text--relation {
+        padding: 1rem 1rem 0;
+    }
+
+
+    &__tittle-curso {
+        font-family: "Tittle-bold";
+        font-size: .9rem;
+
+        @include sm() {
+            font-size: .8rem;
+        }
+
+        @include md() {
+            font-size: .9rem;
+        }
+
+         @include lg() {
+            font-size: 1rem;
+        }
+
+        @include xl() {
+            font-size: 1.1rem;
+        }
+
+
+        &.not-show-extract {
+            
+            ~ .c-card__extract-curso {
+                display: none;
+            }
+
+        }
+
+    }
+
+
+    &__extract-curso {
+        font-size: .9rem;
+        font-family: "Paragraph-regular";
+        line-height: 1.5;
+        display: none;
+
+        @include lg() {
+            display: flex;
+            flex-direction: column;
+            margin: .5rem 0 0;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+
+    &__content-tags-perfiles {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: .5rem 1rem 0;
+        
+        @include md() {
+            padding: .5rem 1.5rem 0;
+        }
+
+    }
+
+
+    &__content-tags-perfiles--relation {
+        position: absolute;
+        bottom: 2rem;
+
+         @include lg() {
+            bottom: initial;
+            top: 7rem;
+         }
+    }
+
+
+    &__date-mobil  {
+        width: 100%;
+        display: none;
+    }
+
+
+    &__date-mobil--Vigente  {
+        display: block;
+
+        @include sm() {
+             display: none;
+        }
+    }
+
+
+    &__tittle-tags {
+        
+        @include md() {
+            width: 100%;
+        }
+    }
+
+
+    &__extract-curso--relation {
+        display: block;
+    }
+
+
+
+
+    &--promo {
+        width: 100%;
+
+        @include sm() {
+            width: 45%;
+        }
+
+        @include md() {
+            width: 30%;
+            margin: 1rem 1rem 1rem;
+        }
+    }
+
+
+    &__link-promo {
+        display: none;
+        bottom: 1rem;
+        position: absolute;
+        right: 1rem;
+
+         @include md() {
+            display: initial;
+         }
+    }
+
+
+}
+
+/* ========================================================================================= */
+/* END COMPONENT - Card*/
+/* ========================================================================================= */

@@ -1,0 +1,292 @@
+/* ========================================================================================= */
+/* COMPONENT - C FOOTER */
+/* ========================================================================================= */
+.c-footer {
+    margin-top: 4rem;
+    border-top: 1rem solid $hover-color;
+
+    $bg-footer-deps: #D8D8D8;
+
+    &__wrapper {}
+
+
+    &__deps {
+        background-color: $bg-footer-deps;
+        padding: 3rem 2rem;
+
+        @include md() {
+            padding: 4rem 3% 2rem;
+            display: flex;
+            flex-wrap: wrap;
+        }  
+
+        @include xl() {
+            padding: 4rem 7% 2rem;
+        }
+    }
+
+
+    &__content-menu-deps {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include md() {
+            width: 50%;
+        }
+
+    }
+
+
+    &__menu {
+        flex-direction: column;
+        width: 50%;
+
+          @include sm() {
+                width: 32%;
+          }
+
+          @include md() {
+                width: 50%;
+          }
+    }
+
+
+    &__menu-item {
+        margin: .33333rem 0;
+    }
+
+
+    &__content-contact-deps {
+        margin-top: 2rem;
+
+        @include md() {
+            margin-top: 0;
+            width: 50%;
+        }
+
+    }
+
+
+    &__logo {
+        width: 100%;
+
+        @include sm(){
+            width: 30%;
+        }
+
+        @include md() {
+            margin-left: 5rem;
+            width: 100%;
+        }
+
+    }
+
+    
+    &__redes {
+        border-bottom: .2px solid #999;
+        padding-bottom: 1rem ;
+    }
+
+
+    &__redes-link {
+        margin-right: 1rem;
+    }
+
+
+    &__redes-icon {
+        color: $tool-color;
+        font-size: 2rem;
+        transition: $transition-slow;
+        
+        &:hover {
+            color: $hover-color;
+        }
+
+    }
+
+
+    &__content-dates {
+        padding: 2rem 0 .5rem;
+    }
+
+
+    &__dates {}
+
+
+    &__dates-tittle {
+        color: $main-color;
+        font-family: 'Tittle-bold';
+        font-size: 1.4rem;
+    }
+
+    
+    &__dates-paragraph {
+        color: black;
+        font-family: 'Paragraph-regular';
+        font-size: 1rem;
+    }
+    
+
+    &_list-dates {
+        flex-direction: column;
+        margin: 1rem 0;
+    }
+
+    
+    &__dates-item {
+        color: black;
+        font-family: 'Paragraph-regular';
+        font-size: 1rem;
+        line-height: 1.2;
+        margin: 0.33333rem 0;
+        padding-left: 2rem;
+    }
+
+    
+    $size-icon-footer: 1.33333rem;
+
+    &__date-text {
+        position: relative;
+        
+        &::before {
+            content: "\f095";
+            color: $tool-color;
+            font-family: 'FontAwesome';
+            font-size: $size-icon-footer;
+            left: -2rem;
+            position: absolute;
+        }
+
+    }
+
+
+    &__date-link {
+        color: black;
+        text-decoration: underline;
+        position: relative;
+
+        &::before {
+            content: "\f0e0";
+            color: $tool-color;
+            font-family: 'FontAwesome';
+            font-size: $size-icon-footer;
+            left: -2rem;
+            position: absolute;
+        }
+
+    }
+
+
+    &__copy-text {
+        font-size: 1rem;
+        font-family: 'Paragraph-regular';
+        line-height: 1.2;
+
+        @include md() {
+            margin-top: 1.5rem;
+        }
+
+    }
+
+
+    &__gob {
+        background-color: $primary-color;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 2rem ;
+        
+
+        @include md() {
+            display: flex;
+            flex-wrap: inherit;
+            padding: 4rem 3rem 2rem;
+        }
+ 
+    }
+
+
+    &__wrapper-menu-gob {
+        margin: 1rem 0 ;
+
+        @include md() {
+            margin: 0;
+        }
+    }
+
+
+
+    &__menu-tittle {
+        color: white;
+        font-family: 'Tittle-bold';
+        font-size: 1rem;
+        margin-bottom: .5rem;
+        line-height: 1.2;
+    }
+
+    
+    &__content-logo-gob {    
+        width: 100%; 
+
+        @include md() {
+            width: 25%;
+        }  
+    }
+
+
+    &__logo-gob {
+        width: 12rem;
+    }
+
+    
+    &__menu-gob {
+        margin-right: 5rem;
+        flex-direction: column;
+    }
+
+    
+
+    &__menu-gob-icons {
+        margin: .25rem 0 0 0;
+    }
+
+
+    &__link-gob-icons {
+        margin: 0 .5rem;
+    }
+
+
+    &__gob-icon {
+         color: $hover-color;
+        font-size: 1.3rem;
+        transition: $transition-slow;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+
+    &__content-pleca-gob {
+        background-image: url('../src/img/pleca.svg');
+        background-size: cover;
+        height: 5rem;
+    }
+
+
+    &__content-menu-gob {
+
+        @include sm(){
+            width: 32%;
+        }
+
+
+    }
+   
+}
+
+
+
+/* ========================================================================================= */
+/* END COMPONENT - C FOOTER */
+/* ========================================================================================= */

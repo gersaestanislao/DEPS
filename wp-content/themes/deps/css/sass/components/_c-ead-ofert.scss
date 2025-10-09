@@ -1,0 +1,150 @@
+/* ========================================================================================= */
+/* COMPONENT - Cards EAD */
+/* ========================================================================================= */
+.c-ead-ofert {
+    width: 100%;
+    margin: 0 auto 4rem;
+
+    @include md() {
+        width: 92%;
+        margin: 0 auto 8rem;
+    }
+
+
+    &__wrapper {
+        display: flex;
+        flex-direction: all;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+
+
+    &__col {
+        background-color: rgba($tool-color, .1);
+        text-align: center;
+        width: 48%;
+        padding: 2rem 1rem 1rem;
+        box-sizing: border-box;
+        border-radius: $border-radius;
+        margin-bottom: 1rem;
+        transition: $transition-slow;
+
+        @include md() {
+             width: 23%;
+             padding: 3rem 2rem 2.5rem
+        }
+
+        &:hover {
+            @include box-shadow ( 0, 2px, 8px, rgba( 0, 0, 0, .33));        
+        }
+
+    }
+
+
+    &__tittle {
+        color: $text-color;
+        font-family: "Tittle-bold";
+        font-size: 1em;
+        height: 2rem;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+
+         @include md() {
+            font-size: 1.3333em;
+            height: 4rem;
+            margin: 0;
+         }
+    }
+
+
+    &__content-icon {
+
+        $content-icon: 6rem;
+
+        background-color: rgba($tool-color, .1);
+         border-radius:  50%;
+         box-sizing: border-box;
+         height: $content-icon;
+         margin: auto;
+         padding: 1.3333rem;
+         width: $content-icon;
+         transition: $transition-slow;
+    }
+
+
+    [class^="st"] {
+        stroke: $main-color;
+        transition: $transition-slow;
+    }
+
+
+    .st4 {
+        stroke: none;
+        fill: $main-color;
+    }
+
+    .st5 {
+        stroke: $main-color;
+        fill:  $main-color;
+        stroke-width: .75;
+    }
+
+
+    &__content-btn {
+        margin: 1rem 0;
+    }
+
+
+   .o-btn--secondary__outline{
+        margin-top: .75rem;
+    }
+
+
+    &__btn {
+        font-size: 1rem;
+        margin: auto;
+        padding: 1rem 0;
+        text-align: center;
+        width: 90%;
+    }
+
+
+    &__link {
+        color: $main-color;
+        display: block;
+        font-family: 'Tittle-bold';
+        font-size: 1rem;
+        text-decoration: underline;
+
+
+         @include md() {
+            font-size: 1.4em;
+            margin-bottom: .5rem;
+         }
+
+
+         &:hover {
+            color: $hover-main;
+         }
+    }
+
+
+
+    &__text {
+        font-size: .9rem;
+
+        @include md() {
+            font-size: 1.1em;
+            margin-bottom: .5rem;
+         }
+
+        } 
+
+}
+
+
+
+/* ========================================================================================= */
+/* END COMPONENT - Cards EAD */
+/* ========================================================================================= */

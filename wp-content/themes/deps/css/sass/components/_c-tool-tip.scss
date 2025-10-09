@@ -1,0 +1,178 @@
+/* ========================================================================================= */
+/* COMPONENT -Card*/
+/* ========================================================================================= */
+.c-tool-tip {
+    display: none;
+    right: 99%;
+    opacity: 0;
+    padding: 1.5rem;
+    position: absolute;
+    top: -15%;
+    transform: translateX( 10% );
+    transition: $transition-slow;
+    width: 300px;
+    z-index: 8;
+
+
+    &:after {
+        @include box-shadow ( 3px, -3px, 4px, rgba(0, 0, 0, 0.25));
+        background-color: #fff;
+        box-sizing: border-box;
+        content: '';
+        display: block;
+        height: 2.26rem;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateX(-.3rem) translateY(-1.2rem) scaleY(.5) rotate(45deg);
+        width: 2.26rem;
+        z-index: 1;
+    }
+
+
+    &--small {
+        @include box-shadow ( 0, 0, 2px, $text-color);
+        background-color: white;
+        padding: .5rem;
+        width: 180px;
+        right: 75%;
+        top: 0;
+
+        &:after {
+            display: none;
+        }
+    }
+
+
+    &--active {
+        display: none;
+
+        @include md(){
+            display: inherit;
+        }
+    }
+
+
+    &--animated {
+        transform: translateX( 2% );
+        opacity: 1;
+    }
+
+
+    &__wrapper {
+        @include box-shadow ( 0, 0, 4px, $shadow-box);
+        color: $text-color;
+        background-color: white;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        padding: 1.5rem;
+        width: 100%;
+    }
+ 
+
+
+
+    &__tittle{
+        font-size: 1rem;
+        font-family: 'Tittle-bold';
+    }
+
+
+    &__content-tags-perfiles {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: .5rem .5rem 0;
+        
+        @include md() {
+            padding: .5rem 0 0.25rem;
+        }
+
+    }
+
+
+    &__content-descript {
+        font-size: .9rem;
+        font-family: "Paragraph-regular";
+        line-height: 1.4;
+        display: none;
+
+        @include sm() {
+            display: inherit;
+            margin: .5rem 0 0;
+        }
+
+    }
+
+
+    &__content-dates {
+        font-size: .9rem;
+        font-family: "Paragraph-regular";
+
+    }
+
+    &__content-dates--Vigente {
+        
+        .c-tool-tip__content-date {
+            display: none;
+        }
+
+        .c-tool-tip__content-date:nth-child(1) {
+            display: block;
+        }
+
+    }
+
+
+    &__content-date {
+        margin-top: .75rem;
+    }
+
+
+    &__content-date--col {
+        width: 45%;
+    }
+
+
+    &__desc-tittle {
+        font-family: "Paragraph-bold";
+        text-transform: uppercase;
+        line-height: 1;
+        font-size: .85rem;
+    }
+    
+
+    &__content-date-cols {
+        display: flex;
+        flex-direction: row;
+    }
+ 
+
+    &__content-btns {
+         display: flex;
+        flex-direction: row;
+        margin: .75rem 0 1rem;
+    }
+
+
+    &__btn {
+        margin: 0 .5rem 0 0;
+
+        &:nth-child(1) {
+            display: none;
+        }
+
+        &.Vigente {
+            display: initial;
+        }
+
+    }
+
+
+
+}
+
+/* ========================================================================================= */
+/* END COMPONENT - Card*/
+/* ========================================================================================= */

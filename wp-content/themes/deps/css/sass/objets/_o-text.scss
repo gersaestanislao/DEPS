@@ -1,0 +1,123 @@
+/* ========================================================================================= */
+/* OBJECT - O TXT */
+/* ========================================================================================= */
+.o-text {
+
+    $size-small-text: .85rem;
+    $size-xsmall-text: .85rem;
+    $size-small-text-desktop: .92rem;
+    $w-small: 'Paragraph-regular';
+    $w-small-b: 'Paragraph-bold';
+
+
+    $size-paragraph-mobile: .9rem;
+    $size-paragraph-desktop: 1rem;
+
+    $w-paragraph-r: 'Paragraph-regular';
+    $w-paragraph-b: 'Paragraph-bold';
+
+    $size-tittle-small-mobile: .9rem;
+    $size-tittle-small-desktop: 1.1rem;
+    
+
+    $w-tittle-b: 'Tittle-bold';
+    $w-tittle-r: 'Tittle-regular';
+
+    $size-tittle-medium-mobile: 1.33rem;
+    $size-tittle-medium-desktop: 1.5rem;
+
+    &--xsmall {
+      font-family: $w-small;
+      font-size: $size-small-text;
+
+    }
+
+
+  &--small {
+    font-family: $w-small;
+    font-size: $size-small-text;
+
+     @include md() {
+      font-size:  $size-small-text-desktop;
+     }
+  }
+
+
+  &--small-bold {
+    font-family: 'Paragraph-bold';
+    font-size: $size-small-text;
+  }
+
+
+  &--paragraph {
+    font-family:  $w-paragraph-r;
+    font-size: $size-paragraph-mobile;
+
+    @include md() {
+      font-size: $size-paragraph-desktop;
+    }
+
+  }
+
+
+  &--paragraph-bold {
+    font-family: $w-paragraph-b;
+    font-size: $size-paragraph-mobile;
+
+    @include md() {
+      font-size: $size-paragraph-desktop;
+    }
+
+  }
+
+
+  &--tittle-small-bold {
+    font-family: $w-tittle-b;
+    font-size: $size-tittle-small-mobile;
+
+    @include md() {
+        font-size: $size-tittle-small-desktop;
+    }
+
+  }
+
+
+  &--tittle-small-regular {
+    font-family: $w-tittle-r;
+    font-size: $size-tittle-small-mobile;
+
+    @include md() {
+        font-size: $size-tittle-small-desktop;
+    }
+
+  }
+
+
+  &--tittle-medium-bold {
+    font-family: $w-tittle-b;
+    font-size: $size-tittle-medium-mobile;
+
+    @include md() {
+        font-size: $size-tittle-medium-desktop;
+    }
+
+  }
+
+
+  &--tittle-medium-regular {
+    font-family: $w-tittle-r;
+    font-size: $size-tittle-medium-mobile;
+
+    @include md() {
+        font-size: $size-tittle-medium-desktop;
+    }
+
+  }
+
+
+}
+
+/* ========================================================================================= */
+/* END OBJECT - O TXT */
+/* ========================================================================================= */
+

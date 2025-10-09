@@ -1,0 +1,140 @@
+/* ========================================================================================= */
+/* OBJECT - O BTNS */
+/* ========================================================================================= */
+.o-btn {
+
+  @include box-shadow ( 0, 6px, 13px, $shadow-btn);
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    border-radius: 5rem;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: 'Paragraph-bold';
+    font-size: .9rem;
+    font-weight: bold;
+    line-height: 1.25;
+    padding: .5rem .75rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: $transition-slow;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+
+
+    &--primary {
+      background-color: $warning-color;
+      color: white;
+
+      &:hover {
+        border: 1px solid $hover-primary;
+        background-color: $hover-primary;
+      }
+
+    }
+
+
+    &--secondary {
+      background-color: $main-color;
+      color: white;
+
+      &:hover {
+        border: 1px solid $hover-main;
+        background-color: $hover-main;
+      }
+
+    }
+
+
+    &--primary__outline {
+      border : 1px solid $warning-color;
+      color: $warning-color;
+    }
+
+
+    &--secondary__outline {
+      border : 1px solid $main-color;
+      color: $main-color;
+
+      &:hover {
+        background-color: $hover-main__outline;
+      }
+
+    }
+
+
+    @include md() {
+      font-size: 1rem;
+      padding: .85rem 2rem;
+
+    }
+
+
+    &--small {
+        @include box-shadow ( 0, 0, 0, 0);
+
+        @include md() {
+         padding: .50rem .75rem;
+         font-family: 'Paragraph-regular';
+        }
+
+    }
+
+
+    &--extend {
+       width: 100%;
+    }
+
+
+    &--md {
+      padding: .5rem 3rem;
+      
+      @include md() {
+        padding: .8rem 4rem;
+      }
+    }
+
+
+    &--close {
+      border: 0;
+      background-color: transparent;
+    }
+
+
+    &--icon {
+      color: $tool-color;
+
+      &:hover {
+        color: $text-color;
+        transition: $transition-slow;
+      }
+      
+    }
+
+
+    &--disiable {
+      cursor: default;
+      color: white;
+      background-color: rgba( $tool-color, 1);
+      border: 1px solid $tool-color;
+      opacity: .5;
+
+      &:hover {
+        background-color: rgba( $tool-color, 1);
+        opacity: .5;
+      }
+
+    }
+
+    &--disiable-Vigente {
+      display: none;
+    }
+
+}
+
+/* ========================================================================================= */
+/* END OBJECT - O BTNS */
+/* ========================================================================================= */
+

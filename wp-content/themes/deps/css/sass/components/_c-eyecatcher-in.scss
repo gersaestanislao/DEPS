@@ -1,0 +1,86 @@
+/* ========================================================================================= */
+/* COMPONENT -eyecatcher*/
+/* ========================================================================================= */
+.c-eyecatcher-in {
+    box-sizing: border-box;
+    height: auto;
+    margin: 7.5rem auto 0;
+    width: 380px;
+
+
+    @include sm() {
+        margin: 6rem auto 04;
+        max-width: 710px;
+        width: 98%;
+        padding: 0 ;
+    }
+
+
+    @include md() {
+        margin: 12rem auto 2rem;
+        max-width: 990px;
+    }
+
+
+    @include lg() {
+        max-width: 1200px;
+    }
+
+
+    &__title {
+        color: $text-color;
+    }
+
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include md() {
+            flex-direction: row;
+            padding-right: 4rem;
+        }
+    }
+
+
+    &--search {
+         margin: 6.5rem auto 2rem;
+         padding: 0 1rem;
+
+
+          @include md() {
+            width: 71%;
+            margin: 12.5rem auto 3rem;
+          }
+
+    }
+
+
+    &__title--search {
+        font-size: 1.2rem;
+        font-family: "Tittle-bold";
+
+        @include md() {
+            font-size: 1.7rem;
+            font-family: "Tittle-bold";
+        }
+    }
+
+
+    &__wrapper--search {
+        padding-right: 4rem;
+        display: initial;
+    }
+
+
+    &__content-text--search {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+/* ========================================================================================= */
+/* END COMPONENT - eyecatcher*/
+/* ========================================================================================= */

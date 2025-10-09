@@ -1,0 +1,150 @@
+/* ========================================================================================= */
+/* TOOLS - MIXINS */
+/* ========================================================================================= */
+
+// Font Face
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+// Center
+@mixin position($m-top:null, $m-right:null, $m-bottom:null, $m-left:null, $top:null, $right:null, $bottom:null, $left:null ) {
+	margin: $m-top $m-right $m-bottom $m-left;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+
+}
+
+// Media queries
+
+@mixin sm() {
+	@media (min-width: 501px) {
+		@content;
+	}
+}
+
+@mixin md() {
+	@media (min-width: 992px) {
+		@content;
+	}
+}
+
+@mixin lg() {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin xl() {
+	@media (min-width: 1400px) {
+		@content;
+	}
+}
+
+
+
+@mixin only-xs() {
+	@media (min-width: 0px) and (max-width: 500px) {
+		@content;
+	}
+}
+
+@mixin only-sm() {
+	@media (min-width: 501px) and (max-width: 1100px) {
+		@content;
+	}
+}
+
+@mixin only-md() {
+	@media (min-width: 1101px) {
+		@content;
+	}
+}
+
+//Box shadow
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+	@if $inset {
+	  -webkit-box-shadow:inset $top $left $blur $color;
+	  -moz-box-shadow:inset $top $left $blur $color;
+	  box-shadow:inset $top $left $blur $color;
+	} @else {
+	  -webkit-box-shadow: $top $left $blur $color;
+	  -moz-box-shadow: $top $left $blur $color;
+	  box-shadow: $top $left $blur $color;
+	}
+  }
+
+ //Text shadow 
+@mixin text-shadow ($x, $y, $blur, $color) {
+	 -webkit-text-shadow: $x $y $blur $color;
+	 -moz-text-shadow: $x $y $blur $color;
+	 text-shadow:$x $y $blur $color;
+}
+
+
+@mixin animation ($delay, $duration, $animation_name, $direction: forward, $fillmode: fowards) {
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-name: $animation_name;
+    -webkit-animation-fill-mode: $fillmode;
+    -webkit-animation-direction: $direction;
+
+    -moz-animation-delay: $delay;
+    -moz-animation-duration: $duration;
+    -moz-animation-name: $animation_name;
+    -moz-animation-fill-mode: $fillmode;
+    -moz-animation-direction: $direction;
+
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $animation_name;
+    animation-fill-mode: $fillmode;
+    animation-direction: $direction;
+
+}
+
+//Animación 
+// keyframes mixin
+@mixin keyframe($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+/* ========================================================================================= */
+/* END TOOLS - MIXINS */
+/* ========================================================================================= */

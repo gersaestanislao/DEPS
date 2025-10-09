@@ -1,0 +1,388 @@
+/* ========================================================================================= */
+/* COMPONENT curso*/
+/* ========================================================================================= */
+.c-curso {
+    box-sizing: border-box;
+    width: 100%;
+
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+
+        @include md() {
+            flex-direction: row;
+            margin: auto;
+            max-width: $max-width-section;
+            width: 98%;
+            align-items: flex-start;
+        }
+
+    }
+
+
+    &__decript-curso {
+        background-color: rgba($tool-color, .1);
+        order: 2;
+        padding: 0 0 4rem;
+
+        @include md() {
+            background-color: transparent;
+            order: 1;
+            padding: 4.5rem 2rem 7rem;
+            width: 65%;
+        }
+
+    }
+
+
+    &__wrapper-descript {
+        box-sizing: border-box;
+        margin: auto;
+        padding: .5rem;
+        width: 360px;
+        
+        @include sm() { 
+            width: 97%;
+        }
+          
+    }
+
+    
+    &__details {
+        box-sizing: border-box;
+        color: $text-color;
+        margin: auto;
+        order: 1;
+        width: 90%;
+        margin-bottom: 2rem;
+
+        @include sm() {
+            margin: 0 2rem;
+            max-width: 640px;
+            width: 95%;
+        }
+
+
+        @include md() {
+            background: #f2f2f2;
+            border: 1px solid #e6e6e6;
+            margin-top: 5.5rem;
+            max-width: 370px;
+            order: 2;
+            width: 38%;
+            top: 0;
+        }
+
+        .c-curso__content-buttons {
+        }
+
+    }
+
+
+
+    &__wrapper-detail {
+        padding: 1.5rem .5rem 1.5rem;
+
+        @include md() {
+            padding: 2.5rem 2.5rem 2rem;
+        }
+    }
+
+
+    &__table-descript {
+
+        @include sm() {          
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+
+        @include md() {
+            display: block;
+        }
+
+    }
+
+
+    &__content-tags-perfiles {
+        align-items: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+
+    &__content-date {
+        display: flex;
+        margin: .75rem 0;
+        width: 100%;
+        @include md() {
+            margin: 0.75rem 0 1.2rem;
+        }
+
+    }
+
+
+    &__content-dates {
+        width: 100%;
+        margin: 1.05rem 0 0;
+
+        .c-curso__content-date {
+            display: none;
+        }
+
+        .c-curso__content-date:nth-child(1) {
+            display: flex;
+        }
+    }
+
+
+    &__content-dates--Desactualizado {
+        display: none;
+    }
+
+
+    &__content-dates--implemetations{
+
+        hr:last-child{
+            display: none;
+        }
+    }
+
+
+    &__content-dates--implemetations--Vigente{
+
+        .c-curso__content-date:nth-child(1) {
+            display: none;
+        }
+    }
+
+
+    &__content-date--implementations {
+        align-items: baseline;
+        background-color: $main-color;
+        box-sizing: border-box;
+        cursor: pointer;
+        margin: 0;
+        padding: .75rem;
+        position: relative;
+        text-align: center;
+        transition: $transition-slow;
+        width: 100%;
+
+
+
+        &:hover {
+            background-color: $hover-main;
+        }
+
+        p {
+            color: white;
+            margin: 0;
+            text-transform: initial;
+            width: 100%;
+        }
+
+
+        .c-accordion__icon-trigger {
+            color: white;
+            top: .7rem;
+        }
+    }
+
+
+    &__content-implementations--no-more {
+        display: none;
+    }
+
+
+    p.not-more {
+        display: none;
+        text-decoration: none !important;
+    }
+
+
+   &__content-implementations--no-more-two {
+        
+        .c-curso__content-dates--implemetations {
+
+             .c-curso__content-date:nth-child(1) {
+                    
+                    opacity: .333;
+                    
+                    form {
+                        display: none;
+                    }
+
+                     p.not-more {
+                        display: initial;
+                     }
+             }
+        }
+    }
+
+
+    &__content-implementations--more {
+        display: block;
+    }
+
+
+    &__content-date-certificate {
+        display: none;
+    }
+
+
+    &__content-date-certificate--show {
+        display: flex;
+    }
+
+
+    &__content-col {
+        display: flex;
+        width: 50%;
+    }
+
+
+    &__detail-content {
+        margin-left: .5rem;
+        width: 100%;
+    }
+
+
+    &__tittle-detail {
+        color: $main-color;
+        display: block;
+        font-family: 'Paragraph-bold';
+        font-size: .8rem;
+
+        @include md() {
+             font-size: .92rem;
+        }
+
+    }
+
+
+    &__link-detail {
+        background-color: transparent;
+        border: 0;
+        color: $hover-primary;
+        font-size: .9rem;
+        text-decoration: underline;
+        transition: $transition-slow;
+
+        &:hover {
+            color: $warning-color;
+        }
+    }
+
+
+    &__detail {
+        font-family: 'Paragraph-regular';
+        font-size: 1rem;
+        line-height: 1.2;
+        text-transform: lowercase;
+
+        @include md() {
+            font-size: 1.1rem;
+            line-height: 1.2;
+        }
+    }
+
+
+    &__detail--Desactualizado { 
+        display: none;
+    }
+
+    
+    &__detail-info { 
+        display: none;
+    }
+
+
+    &__detail-info--Desactualizado { 
+        display: block;
+    }
+
+    
+
+    &__icon-detail {
+     
+       @include md() {
+            font-size: 1.3rem;
+        }
+    }
+
+
+
+    &__icon-detail--large {
+        color: $main-color;
+
+        @include md() {
+            font-size: 2rem;
+        }
+    }
+
+
+    &__content-buttons-- {
+        
+        .c-curso__btn {
+            &:nth-child(1) {
+                display: none;
+            }
+
+            &:nth-child(3) {
+                display: none;
+            }
+
+            &:nth-child(4) {
+                display: none;
+            }
+        }
+
+    }
+
+
+    &__content-buttons--Desactualizado {
+        
+        .c-curso__btn {
+            &:nth-child(1) {
+                display: none;
+            }
+
+            &:nth-child(3) {
+                display: none;
+            }
+
+            &:nth-child(4) {
+                display: none;
+            }
+        }
+
+    }
+
+
+    &__content-buttons--Vigente {
+        .c-curso__btn {
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+
+
+    &__aviso {
+        display: none;
+        margin-bottom: 1.75rem;
+        margin-top: -.9rem;
+        opacity: .5;
+
+        &.Desactualizado {
+            display: block;
+        }
+    }
+
+}
+/* ========================================================================================= */
+/* END COMPONENT - curso*/
+/* ========================================================================================= */

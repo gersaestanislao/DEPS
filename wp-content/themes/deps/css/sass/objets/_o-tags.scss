@@ -1,0 +1,65 @@
+/* ========================================================================================= */
+/* OBJECT - O Tags */
+/* ========================================================================================= */
+.o-tag {
+    $bg-tag: #e3e3e3;
+    $bg-tag-hover: #8a8a8a;
+
+    background-color: $bg-tag;
+    color: $text-color;
+    margin:0 0 .5rem .5rem;
+    padding: 0 .5rem 0 1.2rem;
+    position: relative;
+    
+    @include sm() {
+        margin:.33rem .5rem 0 0;
+        transition: $transition-slow;
+        
+        &:hover {
+             background-color: $bg-tag-hover;
+        }
+        
+    }
+
+
+    &__pin {
+
+        height: 100%;      
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: .5rem;
+                 
+    }
+
+        
+    &__pin--personal-medico {
+        background-color: $color-tag-medic;
+    }
+
+
+    &__pin--personal-de-enfermeria {
+        background-color: $color-tag-nurs;
+    }
+
+
+    &__pin--personal-multidisciplinario-de-salud {
+        background-color: $color-tag-multi;
+    }
+
+
+    &__pin--personal-directivo {
+        background-color: $color-tag-direc;
+    }
+
+
+    &__pin--personal-docente {
+        background-color: $color-tag-docent;
+    }
+ 
+}
+
+/* ========================================================================================= */
+/* END OBJECT - O Tags */
+/* ========================================================================================= */
+

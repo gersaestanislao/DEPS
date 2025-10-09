@@ -1,0 +1,101 @@
+
+/* ========================================================================================= */
+/* COMPONENT - Mision (Descriptivo Acerca de nosotros)*/
+/* ========================================================================================= */
+
+.c-vision {
+    background-color: rgb(255, 255, 255);
+    padding: 6rem;
+
+    @include md() {
+        max-width: 89%;
+       
+    }
+
+
+    &__wrapper {
+        color: $text-color;
+        display: flex;
+        flex-direction: column;
+
+        @include sm() {
+            flex-direction: row;
+            justify-content: center;
+            padding: 3rem 5rem 0rem;
+        }
+
+    }
+
+
+    &__col-1 {
+        display: center;
+        @include sm() {
+            width: 68%;
+            margin-left: 2.5rem ;
+            padding: 0rem 2rem;
+        }
+
+    }
+
+    &__col-2 {
+
+         @include sm() {
+            width: 65%;
+            padding: 2rem;
+        }
+        
+    }
+
+    &__tittle {
+        font-family: 'Tittle-bold';
+        font-size: 1.333333rem;
+        line-height: 1.1;
+        margin-bottom: 3rem;
+        position: relative;
+
+        &:before {
+            background-color: $main-color;
+            bottom: -.75rem;
+            content: '';
+            height: .25rem;
+            left: 0;
+            position: absolute;
+            width: 2rem;
+
+            @include md () {
+                height: .35rem;
+                width: 2.5rem;
+            }
+            
+        }
+
+        @include md() {
+           font-size: 1.533333rem; 
+           line-height: 1.2;
+        }
+
+    }
+
+
+    &__content-descript {
+        
+        p {
+            font-family: 'Paragraph-regular';
+            font-size: .98rem;
+            line-height: 1.6;
+            margin: 0.5rem 0 2.5rem;
+
+             @include md() {
+                font-size: 1.1rem;
+                line-height: 1.2;
+                 margin: 1rem 0rem 1rem;
+             }
+        }
+    }
+    
+
+}
+
+/* ========================================================================================= */
+/* END COMPONENT -  Mision (Descriptivo Misión)*/
+/* ========================================================================================= */

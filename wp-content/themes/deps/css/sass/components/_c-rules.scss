@@ -1,0 +1,24 @@
+.c-rules {
+
+
+    &__list {
+        width: 100%;
+
+        @include md() {
+            width: 80%;
+        }
+    }
+
+    &__list-item {
+        display: flex !important;
+        flex-direction: row;
+        margin: 1rem !important;
+    }
+
+    &__list-icon {
+        font-size: 2rem;
+        margin-right: 1rem;
+        opacity: .7;
+    }
+
+}

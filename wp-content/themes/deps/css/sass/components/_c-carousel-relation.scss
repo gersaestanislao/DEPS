@@ -1,0 +1,146 @@
+/* ========================================================================================= */
+/* COMPONENT - Carousel relation*/
+/* ========================================================================================= */
+.c-carousel-relation {
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 2rem 0 1rem ;
+
+    @media(min-width: 600px){
+        margin: auto;
+        max-width: 887px;
+        padding: 2rem 1rem 1rem;
+        width: 95%;
+    }
+
+    @include md() {
+        padding: 0 0 1rem;
+        max-width: 100%;
+        width: 100%;
+    }
+
+
+    &__owl {
+        min-width: 520px;
+        overflow: hidden;
+        position: relative;
+
+        .owl-stage {
+            left: -15%;
+        }
+
+        .owl-item {
+            opacity: .7;
+        }
+
+        .center {
+            opacity: 1;
+        }
+
+        @media(min-width: 600px){
+
+            .owl-stage {
+                left: 0;
+            }
+
+            .owl-item {
+                opacity: 1;
+            }
+
+        }
+
+    }
+
+
+    &__content-tittle {
+        margin: 2rem ;
+
+        @include md() {
+            margin: 0 4rem 3rem;
+        }
+
+        @include lg(){
+            margin-left: 6rem;
+        }
+    }
+
+
+    &__tittle {
+        color: $text-color;
+        font-family: "Tittle-regular";
+        font-size: 1.1rem;
+        margin: 0 0 0.5rem 0;
+
+        @include md(){
+            font-size: 1.4rem;
+            margin: 1.25rem 0;
+        }
+    }
+
+
+    &__content-btn {
+        margin: 0 2rem;
+
+         @include md(){
+            text-align: center;
+         }
+    }
+
+
+    .owl-nav {
+
+        @media(min-width: 992px) {
+            display: block !important;
+            position: absolute;
+            bottom: 50%;
+            width: 100%;
+        }
+
+        span {
+            display: none;
+        }
+
+    }
+
+
+    .owl-next, .owl-prev {
+        background-color: $warning-color;
+        height: 4rem;
+        transition: $transition-slow;
+        width: 2rem;
+        box-shadow: 0 0 5px 1px $shadow-btn;
+
+        &:before {
+            color: white;
+            font-family: 'FontAwesome';
+            font-size: 2rem;
+        }
+
+
+        &:hover {
+            background-color: $hover-primary;
+        }
+
+    }
+
+
+    .owl-next {
+        float: right;
+
+        &:before {
+            content: "\f054";
+        }
+    }
+
+
+    .owl-prev {
+
+        &:before {
+            content: "\f053";
+        }
+    }
+
+}
+/* ========================================================================================= */
+/* END COMPONENT - Carousel relation*
+/* ========================================================================================= */

@@ -1,0 +1,81 @@
+/* ========================================================================================= */
+/* COMPONENT - Accordion*/
+/* ========================================================================================= */
+.c-accordion {
+
+    &__head {
+        background-color: rgba( $tool-color, .1);
+        cursor: pointer;
+        padding: .5rem 1rem .5rem .5rem;
+        border: 1px solid $main-color;
+        position: relative;
+        transition: $transition-slow;
+        margin-top: 4px;
+
+        &:hover {
+            background-color: rgba( $tool-color, .43);
+        }
+
+        @include md() {
+            padding: .75rem 2.5rem .75rem .75rem;
+        }
+
+    }
+
+
+    &__content {
+        // display: none;
+
+        @include md() {
+            display: block;
+        }
+    }
+
+
+    &__btn-trigger {
+        background: none;
+        border: 0;
+        color: $main-color;
+        font-family: "Paragraph-regular";
+        font-size: .9rem;
+        text-align: center;
+        width: 100%;
+
+         @include md() {
+            font-size: 1rem;
+         }
+    }
+
+
+    &__icon-trigger {
+        position: absolute;
+        right: 1rem;
+        color: $main-color;
+        font-size: 1.3333rem;
+        transition: $transition-slow;
+    }
+
+
+    &__active-accordion {
+
+        .c-accordion__icon-trigger {
+            transform: rotateX(170deg);
+        }
+    }
+
+
+    &__content-text-accordion--implemetations {
+        padding: .1rem .5rem .5rem;
+
+        @include md() {
+            padding: 1rem 2rem .5rem;
+         }
+    }
+
+
+
+}
+
+/* ========================================================================================= */
+/* END COMPONENT -Accordion*/
+/* ========================================================================================= */

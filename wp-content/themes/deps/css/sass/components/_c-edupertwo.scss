@@ -1,0 +1,171 @@
+
+/* ========================================================================================= */
+/* COMPONENT - AMTE (Descriptivo AMTE)*/
+/* ========================================================================================= */
+
+.c-edupertwo {
+    background-color: rgb(231, 231, 231);
+    padding: 0rem 6rem 0rem;
+
+    @include md() {
+        max-width: 89%;
+       
+    }
+
+
+    &__wrapper {
+        color: $text-color;
+        display: flex;
+        flex-direction: column;
+
+        @include sm() {
+            flex-direction: row;
+            justify-content: center;
+            padding: 2rem ;
+        }
+
+    }
+
+
+    &__col-1 {
+        display: center;
+        @include sm() {
+            width: 100%;
+            margin-left: 0rem ;
+            padding: 0rem 0rem;
+        }
+
+    }
+
+    &__col-2 {
+        display: center;
+        @include sm() {
+            width: 100%;
+            padding: 0rem;
+        }
+        
+    }
+
+    &__tittle {
+        font-family: 'Tittle-bold';
+        font-size: 1.333333rem;
+        line-height: 1.1;
+        margin-bottom: 3rem;
+        position: relative;
+
+        &:before {
+            background-color: $main-color;
+            bottom: -.75rem;
+            content: '';
+            height: .25rem;
+            left: 0;
+            position: absolute;
+            width: 2rem;
+
+            @include md () {
+                height: .35rem;
+                width: 2.5rem;
+            }
+            
+        }
+
+        @include md() {
+           font-size: 1.533333rem; 
+           line-height: 1.2;
+        }
+
+    }
+
+
+    &__content-descript {
+        
+        p {
+            font-family: 'Paragraph-regular';
+            font-size: .98rem;
+            line-height: 1.6;
+            margin: 0.5rem 0 2.5rem;
+
+             @include md() {
+                font-size: 1.1rem;
+                line-height: 1.2;
+                 margin: 1rem 0rem 1rem;
+             }
+        }
+    }
+
+    &__col-tex{
+        margin-top: 3rem;
+        padding: 2.5rem 0 0.5rem;
+        @include sm() {
+            width: 53%;
+        }
+        
+        p{
+            font-family: 'Paragraph-regular';
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0.5rem 0 2.5rem;
+
+    }
+    }
+
+    &__col-img{
+        margin-bottom: 1rem;
+        margin-top: 0rem;       
+        align-self: center;
+        @include sm() {
+            padding: 2rem;
+            float: left;
+            
+        }
+
+        @include md() {
+            margin-top: 1rem;
+            padding: 2rem;
+            width: 85%;
+            
+        }
+
+        
+    }
+    
+    &__content-img {
+      
+            height: auto;
+            overflow: hidden;
+            position: relative;
+            object-fit: cover;
+    
+    }
+
+    &__menu-amte {
+        margin-right: 5rem;
+        flex-direction: column;
+        line-height: 2rem;
+        list-style-type: none;
+        margin-top: 1rem;
+    
+        
+        li::before {
+  
+                /* Unicode for a bullet */
+                content: "\2022";
+                  
+                /* Styles for Indentation*/
+                color: rgb(211, 126, 52);
+                  
+                display: inline-block;
+                width: 2em;
+                margin-left: -1em;
+            }
+        
+    
+    }
+
+
+
+}
+
+/* ========================================================================================= */
+/* END COMPONENT -  AMTE (Descriptivo AMTE)*/
+/* ========================================================================================= */

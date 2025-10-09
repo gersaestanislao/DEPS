@@ -1,0 +1,59 @@
+/* ========================================================================================= */
+/* COMPONENT -Botón mesa de ayuda */
+/* ========================================================================================= */
+.c-btn-help-desk {
+    align-items: center;
+    background: $warning-color;
+    border-radius: 5rem;
+    bottom: 3rem;
+    box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.29);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    font-family: "Tittle-bold";
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+    position: fixed;
+    right: 3rem;
+    transition: all .4s ease;
+    z-index: 20;
+
+    @include md() {
+         padding: 0.7rem 2rem;
+    }
+
+
+    &__text {
+        display: none;
+
+        @include md() {
+            display: initial; 
+        }
+    }
+
+
+    &:hover {
+        background: $hover-primary;
+
+        .c-btn-help-desk__icon {
+            color: $warning-color;
+        }
+    }
+
+
+    &__icon {
+        color: white;
+        font-size: 2rem;;
+        transition: all .4s ease;
+
+       @include md() {
+            color: $hover-primary;
+            margin-right: .5rem;
+       }
+    }
+
+}
+
+/* ========================================================================================= */
+/* END COMPONENT -Botón mesa de ayuda */
+/* ========================================================================================= */

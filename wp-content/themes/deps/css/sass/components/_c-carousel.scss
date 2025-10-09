@@ -1,0 +1,260 @@
+/* ========================================================================================= */
+/* COMPONENT - Carousel */
+/* ========================================================================================= */
+.c-carousel {
+    margin-top: 4rem;
+
+    @include md() {
+        margin-top: 7rem;
+    }
+
+
+    &__item {
+        background-position: 60%;
+        background-size: cover;
+        height: 60vh;
+        width: 100%;
+
+        @include sm() {
+           height: 20rem;
+        }
+
+        @include md() {
+            background-position: center;
+            height: 30rem;
+        }
+
+    }
+
+
+    &__item--in {
+         height: 10.5rem;
+
+        @include sm() {
+           height: 12.5rem;
+        }
+
+        @include md() {
+            background-position: center;
+            height: 17rem;
+        }
+
+    }
+
+
+
+    &__item--in-promo {
+         height: 18.5rem;
+
+        @include sm() {
+           height: 19.5rem;
+        }
+
+        @include md() {
+            background-position: center;
+            height: 27rem;
+        }
+
+    }
+
+
+    &__content-text {
+        color: white;
+        text-align: center;
+        padding: 30% 1rem 0;
+
+        @include sm() {
+           padding: 7.5% 0 0;
+            max-width: 33rem;
+            margin: auto;
+        }
+
+        @include md() {
+            text-align: left;
+            padding: 8% 20% 0 7%;
+            max-width: 50rem;
+            margin: inherit;
+        }
+
+    }
+
+
+    &__content-text--in {
+        padding: 9% 2rem 0;
+
+        @include md() {
+            margin: inherit;
+            padding: 7% 0 0 6%;
+        }
+    }
+
+
+    &__tittle {
+        @include text-shadow ( 1px, 1px, 2px, $shadow-text);
+        font-family: 'Tittle-bold';
+        font-size: 1.9rem;
+
+        @include md() {
+            font-size: 3rem;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+    }
+
+
+    &__tittle--promo {
+        @include text-shadow ( 1px, 1px, 2px, $shadow-text);
+        font-family: 'Tittle-bold';
+        font-size: 1.2rem;
+
+        @include md() {
+            font-size: 1.8rem;
+            line-height: 1.333;
+            margin-bottom: 1rem;
+        }
+
+    }
+
+
+    &__paragraph {
+        @include text-shadow ( 1px, 1px, 2px, $shadow-text);
+        font-family: 'Paragraph-regular';
+        font-size: 1.2rem;
+        line-height: 1.2;
+        margin: 0.5rem 0 1.5rem;
+
+         @include md() {
+            font-size: 1.8rem;
+            margin: 0 0 3rem;
+        }
+
+    }
+
+
+    .owl-nav {
+        @include position( 0, auto, 0, auto, null, 0, 50%, 0);
+        position: absolute;
+        width: 97%;
+
+        span {
+            display: none;
+        }
+
+    }
+
+
+    .owl-next {
+        float: right;
+        background-color: transparent;
+
+        &:before {
+            @include text-shadow ( 0, 1px, 5px, $shadow-text);
+            content: "\f054";
+            color: white;
+            font-family: 'FontAwesome';
+            font-size: 2rem;
+            transition: $transition-slow;
+        }
+
+        &:hover {
+            
+            &:before {
+                @include text-shadow ( 0, 3px, 5px, $shadow-text);
+                color: $hover-color;
+            }
+
+        }
+
+    }
+
+
+    .owl-prev {
+        background-color: transparent;
+
+        &:before {
+            @include text-shadow ( 0, 1px, 5px, $shadow-text);
+            content: "\f053";
+            color: white;
+            font-family: 'FontAwesome';
+            font-size: 2rem;
+            transition: $transition-slow;
+        }
+
+        &:hover {
+            
+            &:before {
+                @include text-shadow ( 0, 3 px, 5px, $shadow-text);
+                color: $hover-color;
+            }
+
+        }
+        
+    }
+
+
+    $size-dots: 1rem;
+    $color-dots: white;
+    $shadow-dots: rgba( 0, 0, 0, .6);
+
+    .owl-dots {
+        bottom: 2rem;
+        height: 2rem;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+
+        span {
+            @include box-shadow ( 0, 0, 5px, $shadow-dots);
+            background: transparent;
+            margin: 0 .35rem;
+            border: 2px $color-dots solid; 
+            width: $size-dots;
+            height: $size-dots;
+            display: inline-block;
+            border-radius: 5rem;
+            transition: $transition-slow;
+        }
+
+    }
+
+
+    .owl-dot {
+        background-color: transparent;
+
+
+        &:hover {
+
+            span {
+                @include box-shadow ( 0, 2px, 5px, $shadow-dots);
+                background: $hover-color;
+                border: 2px $hover-color solid; 
+            }
+        }
+
+
+        &.active {
+            cursor: default;
+
+            span {
+                background:  $color-dots;
+            }
+
+            &:hover {
+
+                span {
+                    border: 2px white solid;  
+                }
+            
+            }
+
+        }
+
+    }
+
+
+}
+
+/* ========================================================================================= */
+/* END COMPONENT - Carousel */
+/* ========================================================================================= */

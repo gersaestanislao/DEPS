@@ -1,0 +1,60 @@
+//Configurarción de rem
+:root{
+    font-size: $rem;
+}
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+p {
+    margin: 0 0 .5rem;
+}
+html,
+body{
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    background-color: white;
+    overflow-x: hidden;
+
+}
+
+
+body {
+
+    &.--modal-show {
+        overflow: hidden;
+    }
+
+}
+
+
+ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+img {
+
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+
+}
+
+
+a {
+    color: white;
+    display: inline-block;
+    transition: $transition-slow;
+    text-decoration: none;
+    width: auto;
+}
+
