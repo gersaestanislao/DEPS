@@ -208,6 +208,12 @@
     </footer>
     <!-- Footer end -->
 
+    <!-- Botón flotante WhatsApp -->
+    <a class="c-btn-whatsapp" href="https://wa.me/525556276900" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        <span class="c-btn-whatsapp__sr-only">Escríbenos por WhatsApp</span>
+    </a>
+
     <!-- Botón Meas de Ayuda  -->
 
     <?php if( $postName == 'gestiondirectiva' or  $postName == 'catmaestro'): ?>
