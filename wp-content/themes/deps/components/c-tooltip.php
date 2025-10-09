@@ -1,7 +1,7 @@
 <!-- Tool tip -->
 <div class="c-tool-tip js-tooltip-<?php the_id(); ?>">
     <div class="c-tool-tip__wrapper">
-        <div class="c-tool-tip__content-text">
+        <div class="c-tool-tip__content-text"> 
 
             <!-- Título  -->
             <h3 class="c-tool-tip__tittle"> <?php the_title(); ?></h3>
