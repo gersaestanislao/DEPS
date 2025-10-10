@@ -227,8 +227,7 @@
     <?php else: ?>
         <a href="http://innovacioneducativa.imss.gob.mx/mesa" target="_blank"class="c-btn-help-desk">
             <i class="fa-solid fa-circle-info c-btn-help-desk__icon"></i>
-            <p class="c-btn-help-desk__text">¿Tienes alguna duda?<br>
-            <small>Ingresa a la mesa de ayuda</small>
+            <p class="c-btn-help-desk__text">Ingresa a Mesa de ayuda
             </p>
         </a>
     <?php endif; ?>
