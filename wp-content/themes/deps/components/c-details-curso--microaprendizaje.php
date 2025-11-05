@@ -3,7 +3,7 @@
 
     <!-- Tabla de descriptivo -->
 
-        <div class="c-curso__table-descript">
+        <div class="c-curso__table-descript"> 
    
 
             <!--/*Inscripciones-->
@@ -12,11 +12,9 @@
                 <?php include('objets/o-tema.php'); ?>
             </div>
             <br>
-            <div class="c-curso__detail-content">
-                <span class="c-curso__tittle-detail">Inicio</span>
-                <!-- Inscripción cerrada  -->
-                <p class="c-curso__detail u-text-transforme-none">Abierto permanente</p>              
-            </div>
+            
+             <!--/*Inscripciones-->
+             <?php include('objets/o-date-inscriptions.php'); ?>
 
             <!--/*Duración del curso-->
             <?php include('objets/o-date-duration.php'); ?>
@@ -27,9 +25,15 @@
             
         </div>
 
+            <!--/*btn-->
+            <?php include('c-group-bts.php'); ?>
+    
     </div>
 
     <!--/*Implementaciones-->
-    <?php include('objets/o-form-incriptions--microaprendizaje.php'); ?>
+    <?php include('objets/o-date-implementations.php'); ?>
+
 
 </div>
+
+       

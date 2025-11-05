@@ -33,7 +33,7 @@
                     $tittle = ('Catálogo maestro de documentos en salud');
 
                     }else {
-                            $tittle = ('Catálogo de cursos de EDIMSS');
+                            $tittle = ('Catálogo de cursos en línea');
                         }
 
                

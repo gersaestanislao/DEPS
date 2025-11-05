@@ -1,4 +1,6 @@
 
+<!-- dates -->
+<?php include('functions/f-dates.php'); ?>
 <?php  
         if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
              $url = "https://";   
@@ -28,6 +30,27 @@
         <div class="c-card__wrapper ">
 
             <div class="c-card__col-1">
+
+              <div class="c-card__content-date--wrapper c-card__wrapper-date--<?php echo $active;?>">
+                    
+                    <!--Fechas de inscripciónes-->
+                    <?php if ($primera_vigente): ?>
+                    <div class="c-card__content-date">
+                        <small class="c-card__date-descript o-text--xsmall">Inicio de <br>Inscripción</small>
+                        <span class="c-card__date-day"><?php echo esc_html( format_fecha_dmY($primera_vigente['start']) ); ?></span>
+                    </div>
+                    <?php if (!empty($primera_vigente['startc']) && !empty($primera_vigente['closec'])): ?>
+                    <?php endif; ?>
+                    <?php endif; ?>
+
+                        
+                </div>     
+                
+                <div class="c-card__content-date  c-card__content-date--<?php echo $active; ?> u-color--primary">
+                    <small class="c-card__date-descript o-text--xsmall">Ve próximas</small> <br> 
+                    <small class="c-card__date-descript o-text--xsmall">Inscripciones</small>
+                </div>
+
             
                 <!-- Imagen -->
                 <div class="c-card__content-img"
@@ -77,7 +100,7 @@
         </div>  
 
        <!-- Tooltip-->
-       <?php include('c-tooltip--micro.php'); ?>
+       <?php include('c-tooltip--microv2.php'); ?>
 
     </div>
     
